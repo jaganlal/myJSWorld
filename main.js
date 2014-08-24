@@ -1,5 +1,3 @@
-/* testing */
-
 var myChildClass1 = new thoppesJS.classInheritance.childClass('myChild1');
 myChildClass1.increment();
 myChildClass1.decrement();

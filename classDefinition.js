@@ -6,7 +6,7 @@ var thoppesJS = thoppesJS || {};
 thoppesJS.classInheritance = {
 
   superClass: function() {
-    
+
     if (!this)
       return new superClass();
 
@@ -22,6 +22,7 @@ thoppesJS.classInheritance = {
     this.superX = 0;
 
     this.myPrivilegedSuperFunction = function() {
+      myPrivateCounter++;
       thoppesJS.console.log("Inside myPrivilegedSuperFunction");
     }
 
@@ -90,7 +91,7 @@ function windowsPC (type) {
   this.type = type;
   this.color = "black";
 }
- 
+
 windowsPC.prototype.getInfo = function() {
   return this.color + ' ' + this.type + ' PC';
 };

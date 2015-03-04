@@ -22,14 +22,14 @@ thoppesJS.console.log("Value of boundedGetX is "+boundedGetX());
 
 var calculator = {
   calculate: function() {
-    // var fn = Array.prototype.pop.apply(arguments);
-    // fn.apply(null, arguments);
+    var fn = Array.prototype.pop.apply(arguments);
+    fn.apply(null, arguments);
 
     //to see how binding is working, uncomment this and find out
-    var fn = Array.prototype.pop;
-    fn = fn.bind(arguments);
-    var boundedMethod = fn();
-    boundedMethod.apply(null, arguments);
+    // var fn = Array.prototype.pop;
+    // fn = fn.bind(arguments);
+    // var boundedMethod = fn();
+    // boundedMethod.apply(null, arguments);
   }
 }
 

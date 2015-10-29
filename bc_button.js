@@ -1,4 +1,4 @@
-thoppesJS.console.log("********** barclays **********");
+thoppesJS.console.log("********** bc **********");
 
 function createButtonB() {
 
@@ -15,4 +15,4 @@ function createButtonB() {
   document.body.appendChild(element);
 }
 
-thoppesJS.console.log("********** end barclays ********** </br>");
+thoppesJS.console.log("********** end bc ********** </br>");

@@ -1,4 +1,4 @@
-thoppesJS.console.log("********** barclays **********");
+thoppesJS.console.log("********** bc **********");
 
 var RMPObject = (function() {
 })();
@@ -93,4 +93,4 @@ var obj = {
 
 obj.foo1();
 
-thoppesJS.console.log("********** end barclays ********** </br>");
+thoppesJS.console.log("********** end bc ********** </br>");

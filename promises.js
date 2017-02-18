@@ -61,11 +61,11 @@
 
   //Different speed async operations
   let slow = new Promise((resolve) => {
-    setTimeout(resolve, 200, 'slow');
+    setTimeout(resolve, 3000, 'slow');
   });
   let instant = 'instant';
   let quick = new Promise((resolve) => {
-    setTimeout(resolve, 50, 'quick');
+    setTimeout(resolve, 2000, 'quick');
   });
 
   //The order is preserved regardless of what resolved first

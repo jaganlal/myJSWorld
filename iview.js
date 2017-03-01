@@ -186,7 +186,7 @@
     biz();
   }();
 
-  + function() { thoppesJS.console.log("********** 13. **********"); }()
+  + function() { thoppesJS.console.log("********** 13. Variable declaration **********"); }()
 
   function foo4(){ 
     thoppesJS.console.log("Hi I am inside foo4");
@@ -194,9 +194,12 @@
   }
   var bar = new foo4();
 
-  (function(){
-    // var a = b = 3;
-  })();
+  void function() {
+    var a = b = 15;
+    thoppesJS.console.log("Inside IFFY Value of a & b: "+a+" & "+b);
+  }();
+
+  thoppesJS.console.log("Outside IFFY Value of b: "+b);
 
   + function() { thoppesJS.console.log("********** 14. delete **********"); }()
   var a = { foo: 10, age: 20};
@@ -235,6 +238,30 @@
         models.push(array1[i]);
     }
   }
+
+  + function() { thoppesJS.console.log("********** 18. my bind **********"); }()
+
+  //put it part of Function prototype
+  Function.prototype.bind = Function.prototype.bind || function(context) {
+    var fn = this;
+
+    return function() {
+      fn.apply(context, arguments);
+    }
+  }
+
+  var NVPair = function(n, v) {
+    this.name = n;
+    this.value = v;
+  };
+
+  var show = function() {
+    thoppesJS.console.log(this.name + ' - ' + this.value);
+  };
+
+  var nvp1 = new NVPair('age', 40);
+  show.bind(nvp1)();
+  
 
   + function() { thoppesJS.console.log("********** end iview **********"); }()
 }());

@@ -261,7 +261,49 @@
 
   var nvp1 = new NVPair('age', 40);
   show.bind(nvp1)();
+
+  + function() { thoppesJS.console.log("********** 19. uniqueChars **********"); }()
   
+  function uniqueChars(str) {
+    var unique = '';
+    str = str.toLowerCase();
+
+
+    for (var i = 0; i < str.length; i++) {
+      if (unique.indexOf(str.charAt(i)) == -1) {
+        unique += str[i];
+      }
+    }
+
+    return unique.length;
+  }
+
+  thoppesJS.console.log("uniqueChars('programming'): "+uniqueChars('programming'));
+  thoppesJS.console.log("uniqueChars('test'): "+uniqueChars('test'));
+  thoppesJS.console.log("uniqueChars('Test'): "+uniqueChars('Test'));
+
+  + function() { thoppesJS.console.log("********** 20. String Reverse **********"); }()
+  String.prototype.reverse = function() { 
+    return (this.split('').reverse().join(''));
+  }
+
+  thoppesJS.console.log("'programming'.reverse(): "+'programming'.reverse());
+
+
+  + function() { thoppesJS.console.log("********** 21. String Repeater **********"); }()
+  String.prototype.repeater = function(count) { 
+    var s = '';
+
+    for(var i=0; i<count; i++) {
+      s += this;
+    }
+
+    return s;
+  }
+
+  var mys = 'hello'.repeater(3);
+
+  thoppesJS.console.log("'hello'.repeater(3): "+'hello'.repeater(3));
 
   + function() { thoppesJS.console.log("********** end iview **********"); }()
 }());

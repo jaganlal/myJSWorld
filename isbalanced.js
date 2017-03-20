@@ -9,8 +9,11 @@ var balancedParens = function(str) {
     var chr = str[i];
     if (open[chr]) {
       stack.push(chr);
-    } else if (closed[chr]) {
-      if (open[stack.pop()] !== chr) return false;
+    } 
+    else if (closed[chr]) {
+      if (open[stack.pop()] !== chr) {
+        return -1;
+      }
     }
   }
   
